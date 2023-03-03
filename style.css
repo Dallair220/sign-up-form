@@ -1,17 +1,8 @@
-@font-face {
-    font-family: Aquire;
-    src: url(./font/Aquire-BW0ox.otf);
-  }
-  
-  @font-face {
-    font-family: Quantum;
-    src: url(./font/Quantumregular-MVmXr.otf);
-  }
-  
   body {
     margin: 0;
+    overflow: hidden;
   }
-  
+    
   .container {
     display: flex;
     height: 100vh;
@@ -20,6 +11,8 @@
   .left {
     flex-basis: 33.33%;
     position: relative;
+    height: 100%;
+    line-height: 0;
   }
   
   .right {
@@ -31,8 +24,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 80% 50%;
-    transform: scaleX(-1);
+    object-position: 99% 50%;
   }
   
   .bst {
@@ -41,6 +33,11 @@
     top: 200px;
     z-index: 1;
     width: 100%;
-    transform: scaleX(-1); /* Add this line to mirror the container */
+    padding: 25px;
+    box-sizing: border-box;
   }
   
+  
+  .shadow {
+    filter: drop-shadow( 5px 5px 4px rgba(0, 0, 0, .7));
+  }

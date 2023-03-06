@@ -13,15 +13,89 @@
             <div class="bst">
                 <img class="shadow" src="./img/logo.svg" alt="Boostopia logo">
             </div>
-            <img src="./img/cropped.jpg" alt="League Background">
+            <img src="./img/cropped.jpg" alt="League background, girl face">
         </div>
         <div class="right">
-            <p>This is not a real online service! You know you need something like this in your life to help realize your deepest dreams.</p>
-            <p>Sign up now to get started.</p>
-            <br>
-            <p>You know you want to.</p>
+            <div class="one">
+                <p>This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi!</p>
+                <p>Sign up <em>now</em> to get started.</p>
+                <br>
+                <p>You <em>know</em> you want to.</p>
+            </div>
+            <div class="two">
+                <h2>Sign Up</h2>
+                <form action="">
+                    <div class="form">
+                        <ol>
+                            <li>
+                                <label for="fname">FIRST NAME <br>
+                                    <input type="text" name="fname" id="fname">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="mail">EMAIL <br>
+                                    <input type="email" name="mail" id="mail">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pw">PASSWORD <br>
+                                    <input type="password" name="pw" id="pw1">
+                                </label>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <label for="lname">LAST NAME <br>
+                                    <input type="text" name="lname" id="lname">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="phone">PHONE NUMBER <br>
+                                    <input type="tel" name="phone" id="phone" pattern="[0-9]*">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pw">CONFIRM PASSWORD <br>
+                                    <input type="password" name="pw" id="pw2">
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+            </div>
+            <div class="three">
+                <button type="submit">Create Account</button>
+            </form>
+                <br><em></em>Already have an account? <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Log in</a>
+            </div>
         </div>
     </div>
-</body>
+    <script>
+        const pw1 = document.querySelector('#pw1');
+        const pw2 = document.querySelector('#pw2');
+        const error = document.createElement('p');
+        error.classList.add('error-msg');
+        const button = document.querySelector('button');
+      
+        button.addEventListener('click', function(e) {
+          if(pw1.value !== pw2.value) {
+            e.preventDefault();
+            error.textContent = "* Passwords do not match";
+            pw1.insertAdjacentElement('afterend', error);
+            pw1.classList.add('error');
+            pw2.classList.add('error');
+        } else {
+            error.textContent = "";
+          }
+        });
+      
+        pw2.addEventListener('input', function() {
+          if(pw1.value === pw2.value) {
+            error.textContent = "";
+            pw1.classList.remove('error');
+            pw2.classList.remove('error');
+          }
+        });
+      </script>
+              </body>
 </html>
 

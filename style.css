@@ -31,7 +31,6 @@
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 200px;
-    z-index: 1;
     width: 100%;
     padding: 25px;
     box-sizing: border-box;
@@ -42,30 +41,18 @@
     filter: drop-shadow( 5px 5px 4px rgba(0, 0, 0, .7));
   }
 
-.right{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+  .right{
+    width: 100%;
+  }
 
 .one,
 .two,
 .three{
-  flex: 1;
-  padding-left: 70px;
-  padding-top: 50px;
+  padding: 25px 50px;
 }
 
 .one{
-  flex: 1 1 0;
-}
-
-.two{
-  flex: 4 1 0;
-}
-
-.three{
-  flex: 6 1 0
+  height: 100px;
 }
 
 .one,
@@ -74,8 +61,8 @@
 }
 
 .two{
-  z-index: 1;
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 p{
@@ -84,11 +71,7 @@ p{
 
 h1{
   font-size: 40px;
-}
-
-.one{
-  padding-top: 100px;
-  padding-right: 200px;
+  
 }
 
 .form{
@@ -97,12 +80,11 @@ h1{
 }
 
 ol{
-  padding: 20px 0px;
+  padding: 0px 0px;
 }
 
 li{
   margin-top: 25px;
-  padding-top: 10px;
 }
 
 label{
@@ -138,7 +120,6 @@ button {
   font-weight: bold;
   font-size: 15px;
   margin-bottom: 20px;
-  margin-top: -100px;
   background-size: 200% 100%;
   background-position: left;
   transition: background-position 0.5s, transform 0.5s;
@@ -174,3 +155,6 @@ a{
 
 }
 
+.three{
+  height: 100%;
+}

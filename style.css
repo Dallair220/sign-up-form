@@ -56,6 +56,18 @@
   padding-top: 50px;
 }
 
+.one{
+  flex: 1 1 0;
+}
+
+.two{
+  flex: 4 1 0;
+}
+
+.three{
+  flex: 6 1 0
+}
+
 .one,
 .three{
   background-color: #f9fafb;
@@ -70,8 +82,8 @@ p{
   font-size: 20px;
 }
 
-h2{
-  font-size: 30px;
+h1{
+  font-size: 40px;
 }
 
 .one{
